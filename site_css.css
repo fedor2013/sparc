@@ -2,7 +2,7 @@
 	width: 100%;
 	position: relative;
 	background-color: #FFC;
-	text-align: right;
+	/*text-align: right;*/
 	border-bottom: 1px #960 solid;
 	-khtml-box-shadow:   inset 5em 1em 5px 10px gold, 1px 1px 5px 10px rgba(0,0,0,0.5);
 	-icab-box-shadow:   inset 5em 1em 5px 10px gold, 1px 1px 5px 10px rgba(0,0,0,0.5);
