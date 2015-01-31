@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+</head>
+<body>
+<h1>
+	<script type="text/javascript">
+		document.write("Hello, World")
+
+		var counter = function (num){
+			counter.count = num !== undefined ? num : counter.count;
+			return counter.count++;
+		};
+
+		counter.count = 0;
+
+		console.log(counter());
+		console.log(counter());
+		console.log(counter());
+		console.log(counter(802));
+		console.log(counter());
+		console.log(counter());
+
+		//инструкция throw catch finally
+		//
+		//
+		var calculate = function(n){
+			if (n> 10) throw new Error("ошибка!!!");
+			return n + 10;
+		};
+
+		
+
+		try
+		{
+			calculate(20);
+		}
+		catch (e) 
+		{
+			console.log("Cant calculate " + e.message);			
+		}
+
+//Объекты 17 урок.
+//
+		var person = {
+			name: "Sorax",
+			age: 20,
+			gender: "male",
+			sat: function(){
+				return "hello";
+			}
+		}		
+
+		// выражение.иденитфикатор
+		//console.log(person.name);
+		//console.log(person.age);
+
+		// выражение[выражение]
+		//console.log(person["age"]);
+		//
+		person.age = 25;
+		person.userID = 22222355;
+		
+		console.log(person);
+		console.log(person.sat());
+
+		// Объекты
+		var object = Object.create({x:10, y:20});
+		object.x = 20;
+		console.log(object);
+
+		// delete выражение
+		delete object.x
+		console.log(object)
+
+		//оператор in проверяет наследованное свойство или родное
+		console.log("x" in object);
+		console.log("o" in object);
+		
+		//опертор in определяет отсутствующие свойства и свойства которые были устновлены вручную .т.е он нам покажет что если мы установили несуществующее свойство то это свойство будет как undefined а если мы используем оператор in То это несуществующее свойство превратится в объект
+		console.log(object.z);
+		console.log("z" in object);
+		//первоначальная инициализация поля объекта с явным приведением типа поля с неопределенного к типу "Объект"
+		object.z = undefined;
+		console.log(object.z);
+		console.log("z" in object);
+
+		
+
+		
+
+
+
+
+
+
+	</script>
+</h1>
+<h1>
+	<noscript>
+		Для просмотра этой страницы потребуется JavaScript
+	</noscript>
+</h1>
+</body>
+</html>

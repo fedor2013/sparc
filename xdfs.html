@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>xdfs</title>
+	<link rel="stylesheet" href="m.css">
+</head>
+<body>
+	<h1>Привет как дела?</h1>
+	<!-- #listmenu.clearfix+ul>(li>a[href="#link$$_.html_.css_.jpg_.js"]{textLink$$$}+(ul>(li>a[href="#link$$_.html_.css_.jpg_.js"]{textLink$$$})*5))*4 -->
+
+	<!-- #listmenu.clearfix+ul>(li>a[href="l$"]{linkText$$})+(li>a[href="$"]{linkText$$}+ul>(li>a[href="l$"]{linkText$$})*2)+li>a[href="l$"]{linkText$$} -->
+	<div id="listmenu" class="clearfix">
+	<ul>
+		<li><a href="l1">linkText01</a></li>
+		<li>
+			<a href="1">linkText01</a>
+			<ul>
+				<li><a href="l1">linkText01</a></li>
+				<li><a href="l2">linkText02</a></li>
+				<li>
+					<a href="l3">linkText03</a>
+					<ul>
+						<li><a href="">text1</a></li>
+						<li><a href="">text2</a></li>
+						<li><a href="">text3</a></li>
+					</ul>			
+				</li>
+			</ul>
+		</li>
+		<li><a href="l1">linkText01</a></li>
+	</ul>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+
+	<!--======= работа с кнопкой =======-->
+	<div class="button">
+		<a class="roll" href="#">Graphics</a>
+	</div>
+
+	<br>
+	<br>
+	<br>
+
+	<!--======= работа с формой ========-->
+	<div id="formcontainer">
+		<form action="page.html" method="post">
+			<!-- текстовое поле с одной строкой -->
+			<div class="clearfix">
+				<label for="">Введите свое имя</label>
+				<input type="text" onfocus="clearText(this)" name="firstName" type="text" size="35" value="enter first name here" />
+			</div>		
+			<!-- текстовое поле для нескольких строк -->
+			<div class="clearfix">
+				<label>lorem ipsum</label>
+				<textarea name="firstName" cols="37" rows="6">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia harum cum, nemo architecto quos quae consectetur omnis consequatur, ad aspernatur, excepturi fugiat 									quaerat nihil voluptates illum modi. Explicabo, asperiores, ipsa.
+				</textarea>
+			</div>
+			<!-- поле ввода пароля -->
+			<div class="clearfix">
+				<label>Password</label>
+				<input type="password" name="firstName" size="35" value="Введите пароль тут" />
+			</div>
+
+			<!--======= выпадающее меню =====-->
+			<div class="clearfix">
+				<label>Выберите из списка</label>
+				<select name="menuChoise">
+					<option value="no_selection_made">РФ</option>
+					<option value="fender">Германия</option>
+					<option value="fender">США</option>
+					<option value="tylor"> Китай	</option>
+				</select>
+			</div>
+
+
+			<!-- кнопка отправки сообщений -->
+			<div class="clearfix">
+				<input type="submit" value="Отправить" />
+			</div>
+
+		</form>
+	</div><!-- конец общего контейнера div -->
+
+	<br>
+	<br>
+	<br>
+
+			<!--===== работа с кнопками  =======-->
+			<!-- работа с кнопками с зависимой фиксацией -->
+			<div class="clearfix">
+				<label>Pick one</label>
+				<div class="buttongroup clearfix">
+				 	<div>
+						<input type="radio" name="radioset" size="35" value="choise_1" checked="checked">
+					</div>
+					<div>
+						<input type="radio" name="radioset" size="35" value="choise_2">
+					</div>
+					<div>
+						<input type="radio" name="radioset" size="35" value="choise_3">
+					</div>
+				</div>
+			</div>
+			<!-- работа с кнопками с независимой фиксацией -->
+			<div class="clearfix">
+				<label>Pick one</label>
+				<div class="buttongroup clearfix">
+				 	<div>
+						<input type="checkbox" name="boxset" size="35" value="choise_1">
+					</div>
+					<div>
+						<input type="checkbox" name="boxset" size="35" value="choise_2">
+					</div>
+					<div>
+						<input type="checkbox" name="boxset" size="35" value="choise_3" checked="checked">
+					</div>			
+				</div>
+			</div>
+
+			
+
+	<!--=== реализация поиска ===-->
+	<div id="searcharea">
+		<h3>Massive Dynamicc</h3>
+		<form action="search.html" name="search">
+			<input type="text" name="search" size="20">
+			<a href="javascript:document.search.submit()">GO</a>
+		</form>
+	</div>
+			
+			
+
+</body>
+</html>

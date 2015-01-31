@@ -1,0 +1,251 @@
+body{
+	font-family: verdana, arial, sans-serif; font-size: 100%;
+}
+
+* { 
+	margin: 0;
+	padding: 0;
+}
+
+div#listmenu{
+	width: 100%;
+	float: left;
+	border-top: 1px solid #069;
+	border-bottom: 1px solid #069;
+	font-size: .8em;
+	text-transform: uppercase;
+	background-color: #CCF;
+	margin-top: 25px;
+}
+
+div#listmenu ul{
+	margin: 0 0 0 30px;
+}
+
+div#listmenu li{
+	float: left;
+	position: relative;
+	list-style-type: none;
+	background-color: #FFA;
+	border-right: 1px solid #069;
+}
+
+div#listmenu li:first-child{
+	border-left: 1px solid #069;	
+}
+
+div#listmenu li:hover{
+	background-color: #FFF;
+}
+
+div#listmenu a{
+	padding: 0 6px;
+	text-decoration: none;
+	color: #069;
+}
+
+div#listmenu a:hover{
+	color: #F33;
+}
+
+/* трюки для IE  -  создание вертикальной черты слева */
+* html div#listmenu ul{
+	float: left;
+	border-left: 1px solid #000;
+	margin-left: 15px;
+}
+
+/*делаем выпадающее меню*/
+div#listmenu ul li ul{
+	margin: 0;
+	position: absolute;
+	width: 10em;
+	left: -1px;
+}
+
+div#listmenu ul li ul li{
+	width: 100%;
+	border-left: 	1px solid #069;
+	border-bottom: 	1px solid #069;
+	border-right: 	1px solid #069; 
+}
+
+div#listmenu ul li ul li:first-child{	
+	border-top: 	1px solid #069;
+}
+
+/*прячем меню*/
+body div#listmenu ul li ul {
+	display: none;
+}
+
+/*заставляем меню появляться*/
+div#listmenu ul li:hover ul, div#listmenu ul li ul:hover {
+	display: block;
+}
+
+/*трюк для IE для раскрывающегося меню*/
+* html div#listmenu ul li ul {
+	border-top: 1px solid #069;
+	border-left: 0px;
+}
+
+/*делаем все ссылки блочными элементами*/
+div#listmenu a{
+	display: block;	
+}
+
+/*делаем подменю второго уровня*/
+body div#listmenu ul li ul li ul{
+	visibility: hidden;
+	left: 10em;
+	top: -1px;
+}
+
+div#listmenu ul li ul li:hover ul {
+	/*идентично display: block;*/
+	visibility: visible;
+}
+
+
+/* ======= работа с кнопками ========= */
+div.button{
+	width: 120px;
+	height: 24px;
+	top: 0px;
+	left: 0px;
+	border: 1px solid #000;	
+	margin-left: 150px;
+	margin-top: 50px; 
+}
+
+a.roll{
+	width: 120px;
+	height: 24px;
+	display: block;
+	padding-top: 2px;
+	font: bold 10pt;
+	text-align: center;
+	border: 1px solid red; 
+}
+
+div.button a.roll:link 		{ color: black; text-decoration: none; background-position: 0px 0px;}
+div.button a.roll:visited 	{ color: green; background-position: 0px -25px; }
+div.button a.roll:hover 	{ color: #069;  background-position: 0px -50px; }
+div.button a.roll:active 	{ color: white; background-position: 0px -75px; }
+
+div.button a.roll { 
+	width: 120px; 
+	height: 20px; 
+	padding-top: 4px; 
+	display: block;
+	font: bold 10pt verdana, sans-serif;
+	text-align: center;
+	background: url("p.jpg") 0px 0px no-repeat #000;
+}
+
+/*создание формы с нуля*/
+div#formcontainer {
+	width: 450px;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+
+div#formcontainer form {
+	border-top: 2px solid #CCC;
+	border-bottom: 3px solid #CCC;
+}
+
+div#formcontainer div.clearfix {
+	border-top: 1px solid #CCC;
+	padding: 10px 0px;
+}
+
+div#formcontainer form label {
+	width: 150px;
+	float: left;
+	font-size: .75em;
+	font-weight: bold;
+	color: #003366;
+	margin: 0 10px;
+}
+
+div#formcontainer div.buttongroup {
+	float: left;
+	border: 0px;
+	padding: 0px;
+	border: 2px solid #CCC;
+}
+
+div#formcontainer div.buttongroup div {
+	margin-bottom: 5px;
+	font-size: .75em;
+	border: 1px solid;
+}
+
+div#formcontainer div.buttongroup input {
+	margin-right: 5px;	
+}
+
+div#formcontainer form select {
+	width: 50px;
+	color: #50F;	
+}
+
+/*форма поиска*/
+#searcharea {
+	height: 44px;
+	width: 220px;
+	margin: 30px 0 0 100px;	
+}
+
+div>#searcharea {
+	padding-top: 6px;	
+}
+
+#searcharea h3 {
+	text-transform: uppercase;
+	font-size: .8em;
+	color: #546DAF;
+	text-align: left;
+	padding-left: 15px;
+}
+
+#searcharea form input {
+	border-top: 2px solid #546DAF;
+	border-right: 1px solid #546DAF; 
+	border-bottom: 2px solid #546DAF; 
+	border-left: 1px solid #546DAF; 
+	font-size: .9em;
+	background-color: #E0E0E0;
+}
+
+#searcharea form a:link {
+	font-size: .75em;
+	font-weight: bold;
+	color: #546DAF;
+	margin-left: -30px;
+}
+
+#searcharea form a:hover {
+	font-size: .75em;
+	font-weight: bold;
+	color: rgb(112,146,190);
+	margin-left: -30px;
+}
+
+#searcharea form a:active {
+	font-size: .75em;
+	font-weight: bold;
+	color: rgb(255,255,255)
+	margin-left: -30px;
+}
+
+#searcharea form a:visited {
+	font-size: .75em;
+	font-weight: bold;
+	color: rgb(255,255,190);
+	margin-left: -30px;
+}
+
+
